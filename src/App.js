@@ -1,4 +1,5 @@
 // Remove any explicit import for React at the top of your files
+
 import React from 'react';
 import "./App.css";
 import About from "./Components/About";
@@ -40,15 +41,14 @@ function App() {
       <Router>
         <Navbar
           title="TextUtils"
-          about="About Textutils"
+          about="About"
           mode={mode}
           toggleModeSwitch={toggleMode}
         />
         <Alert alert={alert} showAlert={showAlert} />
         <Routes>
-          <Route exact path="/About" element={<About />} />
-          <Route exact path="/" element={<TextForm heading = "Enter text to analyze" mode={mode} alert={alert} showAlert={showAlert}/>}/>
-        </Routes>    
+          <Route exact path="/about" element={<About />} />
+          <Route exact path="/home" element={<TextForm heading = "Enter text to analyze" mode={mode} alert={alert} showAlert={showAlert}/>}/></Routes>  
       </Router>
     </>
   );
